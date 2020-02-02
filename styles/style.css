@@ -1,0 +1,266 @@
+:root {
+    background-color: #F6F6F2;
+    color: #388087;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.outer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 95vh;
+    grid-template-rows: 150px 20% 4fr 100px;
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer";
+    text-align: center;
+}
+
+.header-container {
+    grid-area: header;
+    background-color: #EDC7B7;
+;
+}
+
+.hero-container {
+    grid-area: hero;
+    background-color:#EEE2DC;
+}
+
+
+.body-container {
+    grid-area: body;
+    background-color: #BAB2B5;
+}
+
+.ad-container {
+    display: none;
+}
+
+.footer-container {
+    grid-area: footer;
+    background-color: #123C69;
+}
+
+/* main {
+    width: 75%;
+    height: 30%;
+    align-self: center;
+} */
+
+.header-inner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 100px;
+    grid-template-areas:
+        "brand brand"
+        "nav tools"
+}
+
+.header-inner-container .brand {
+    grid-area: brand;
+    justify-self: center;
+    align-self: center;
+}
+
+.header-inner-container .nav  {
+    grid-area: nav;
+    justify-self: center;
+    align-self: center;
+}
+.header-inner-container .nav a {
+    float: left;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* .header-inner-container .nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header-inner-container .nav a.active {
+    background-color: dodgerblue;
+    color: white;
+  } */
+
+.header-inner-container .tools {
+    grid-area: tools;
+    justify-self: center;
+    align-self: center;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px;
+    grid-template-areas:
+       "cta";
+}
+
+.hero-feature {
+    display: none;
+    justify-self: center;
+    align-self: center;
+}
+
+.hero-cta {
+    grid-area:cta;
+    justify-self: center;
+    align-self: center;
+}
+
+.body-inner-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 20% 60%;
+    grid-template-areas:
+       "art-feat"
+       "body-ad"
+       "art-list";
+}
+
+.article-feature {
+    grid-area: art-feat;
+    background-color: seagreen;
+}
+
+.body-ad {
+    grid-area: body-ad;
+    display: flex;
+    position: relative;
+}
+
+.body-ad button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+
+.article-listing {
+    grid-area: art-list;
+    text-align: justify;
+    padding: 10px;
+}
+
+.side-bar-container {
+    display: none;
+    background-color: yellowgreen;
+}
+
+#footer {
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    
+    .side-bar-container {
+        display: block;
+        grid-area: sidebar;
+    }
+
+    .outer-container {
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 150px 1fr 2fr 3fr 1fr 100px;
+        grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "body body body"
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+        background-color: silver;
+    }
+
+    .header-inner-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 100px;
+        grid-template-areas:
+            "brand nav tools"
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 50px;
+        grid-template-areas:
+           "hero-feature"
+           "cta";
+    }
+
+    .hero-feature {
+        display: block;
+        grid-area: hero-feature;
+        background-color: salmon;
+    }
+
+    .body-inner-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas:
+           "art-feat body-ad"
+           "art-list art-list";
+    }
+   
+}
+
+@media (min-width: 992px) {
+    .outer-container {
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 100px 278px 2fr 3fr 100px;
+        grid-template-areas:
+        "header header header"
+        "hero hero ad"
+        "body body sidebar"
+        "body body sidebar"
+        "footer footer footer";
+
+    }
+
+    .header-inner-container {
+        display: grid;
+        grid-template-columns: 2fr 7fr 3fr;
+        grid-template-rows: 100px;
+        grid-template-areas:
+            "brand nav tools"
+    }
+
+    .hero-inner {
+        grid-template-columns: 6fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+           "hero-feature cta";
+    }
+
+    .ad-container {
+        display: block;
+        grid-area: ad;
+    }
+
+    .ad-container img {
+        height: 80%;
+        width: 100%;
+    }
+
+
+    .body-ad {
+        display: none;
+    }
+
+    .body-inner-container {
+        display: grid;
+        grid-template-columns: 3fr 6fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+           "art-feat art-list";
+    }
+}
