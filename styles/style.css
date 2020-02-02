@@ -159,6 +159,8 @@
 
 #footer {
     text-align: center;
+    margin-top:3%;
+    color: white;
 }
 
 @media (min-width: 576px) {
@@ -170,7 +172,7 @@
 
     .outer-container {
         grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 150px 1fr 2fr 3fr 1fr 100px;
+        grid-template-rows: 150px 1fr 2fr 1fr 100px;
         grid-template-areas:
         "header header header"
         "hero hero hero"
@@ -216,7 +218,7 @@
 @media (min-width: 992px) {
     .outer-container {
         grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 100px 278px 2fr 3fr 100px;
+        grid-template-rows: 100px 278px 338px 3fr 100px;
         grid-template-areas:
         "header header header"
         "hero hero ad"
