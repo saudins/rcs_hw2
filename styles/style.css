@@ -172,7 +172,7 @@
 
     .outer-container {
         grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: 150px 1fr 2fr fr 100px;
+        grid-template-rows: 150px 1fr 2fr 1fr 100px;
         grid-template-areas:
         "header header header"
         "hero hero hero"
