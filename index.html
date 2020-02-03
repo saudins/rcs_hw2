@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Coda&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
     <title>Responsive CSS</title>
 </head>
 
@@ -19,17 +21,16 @@
                 <div class="header-inner-container">
                     <div class="brand" href="#">
                         <img src="images/truck.svg" alt="brand image" width="40" height="40">
+                        <p>stiep & krāmē</p>
                     </div>
-                    <div class="nav">
-                        <button type="button" class="btn btn-primary">
+                    <div class="nav collapsible-menu">
+                        <input type="checkbox" id="menu">
+                        <label for="menu">Izvēlne</label>
+                        <div class="menu-content">
                             <a href="#hero">Stiep un krāmē!</a>
-                        </button>
-                        <button type="button" class="btn btn-light">
                             <a href="#mes">Par mums</a>
-                        </button>
-                        <button type="button" class="btn btn-light">
                             <a href="#sidebar">Papildus info</a>
-                        </button>
+                        </div>
                     </div>
                     <div class="tools">
                         <form action="#">
@@ -46,49 +47,58 @@
                         <p>Mēs esam stiepšanas un krāmēšanas meistari</p>
                     </div>
                     <div class="hero-cta">
-                        <button type="button" class="btn btn-danger">Spied šeit</button>
-                        <span>un mēs stiepsim un krāmēsim!</span>
+                        <a type="button" class="btn btn-danger" href="mailto:raksti@stiepunkrame.lv">Spied šeit un mēs būsim klāt, lai stieptu un
+                            krāmētu!</a>
                     </div>
                 </div>
             </div>
             <div class="body-container">
                 <div class="body-inner-container">
                     <div class="article-feature">
-                        <h3>
-                            Mums ir liela pieredze pārvākšanās servisa jomā, sākot no maziem dzīvokļiem, un beidzot ar
-                            lielām, valsts konkursos uzvarētām, iestāžu pārvietošanām uz jaunām telpām.
-                        </h3>
+                        <h2>Pozitīva atsauksme</h2>
+                        <blockquote>
+                            <p>Viņi ir nepārspējami! Viņi dara visu, sākot ar malkas
+                                grēdas pārkrāmēšanu līdz pat tādiem neordināriem darbiem kā puķu iestādīšana siltā
+                                ziemā.
+                            </p>
+                            <p>
+                                Kliente <strong>Inese</strong>
+                            </p>
+                        </blockquote>
                     </div>
                     <div class="body-ad">
                         <img id="body-reklama" src="images/krava.jpg" alt="reklama">
-                        <button type="button" class="btn btn-warning">Reklāma</button>
+                        <a href="http://www.movers.lv/" type="button" class="btn btn-warning button" target="blank">Reklāma</a>
                     </div>
                     <div id="mes" class="article-listing">
                         <h2>Mēs pārvedīsim visas mantas!</h2>
-                        <p>Stiep un krāmē ir personīgo mantu un biroju resursu pārvešanas eksperti ar pieredzi, kuras
-                            pirmsākumi sākās vēl no tiem laikiem, kad profesionālie pārvietošanās pakalpojumi Baltijā
-                            pat nebija pazīstami, un mūsu komandai ir visplašākā pieredze privātās iedzīves pārvešanā
-                            no/uz dzīvokļiem, mājām un rezidencēm. Neatkarīgi vai Jūs pārvācaties Rīgā no punkta A uz
-                            punktu B, vai Jūsu galamērķis ir ārpus Latvijas robežām. Mēs pārceļamies katru dienu un
-                            zinām, kā to izdarīt vislabāk.</p>
-                        <p>Mums ir pieejams viss iepakojamo materiālu klāsts, kāds vien var būt nepieciešams mantu
-                            drošai iepakošanai. Mūsu pakalpojumu klāstam nav limitu, un viss ir atkarīgs no Jūsu vēlmēm
-                            un iespējām - nepieciešamības gadījumā varam piedāvāt tranzīta noliktavas pakalpojumus,
-                            automašīnu, laivu, kuteru, motociklu transportēšanu un vēl daudz ko citu.</p>
+                        <h3>Mēs aktīvi stiepjam</h3>
+                        <p>Mēs esam lieli stiepēji. Tik dodiet mums stiep. No malkas pagales līdz klavierēm (nu,
+                            klavieres gan vēl nekad neesam stiepuši, bet zinām dažus, kas ir!), mēs aizstiepsim visu.
+                            Esam vairāk kārtīgi pārkārtojuši Ineses un Jura malkas grēdiņas, jautājiet paši, cik
+                            lieliski esam!</p>
+                        <h3>Vēl aktīvāk krāmējam</h3>
+                        <p>Ko dod stiep malkas pagalīti, ja tā netiek sakrāmēta? Te nu mēs esam eksperti! Mums ir 50+
+                            tehnikas, kā veiksmīgāk sakārtot, sakrāmēt, salikt. Tik dodiet mums problēmu, mēs to
+                            atrisināsim! Un līdzīgi mēs krāmējam visu, jo, mēs esam krāmēšanas eksperti!</p>
                     </div>
                 </div>
             </div>
             <div class="ad-container">
                 <img id="reklama" src="images/krava.jpg" alt="reklama">
-                <button type="button" class="btn btn-warning">Reklāma</button>
+                <a href="http://www.movers.lv/" type="button" class="btn btn-warning button" target="blank">Reklāma</a>
             </div>
             <div id="sidebar" class="side-bar-container">
                 <div class="side-bar-feature">
+                    <h3>Stiep in krāmē ir:</h3>
                     <ul>
-                        <li>Liela pieredze</li>
-                        <li>Profesionāla komanda</li>
-                        <li>Lieliska attieksme</li>
-                        <li>Individuāla pieeja</li>
+                        <li>Divi strādnieki!</li>
+                        <li>Bet profesionāļi!</li>
+                        <li>Ar humora izjūtu</li>
+                        <li>Un vārdos neizsakāmu iztēli!</li>
+                        <li>Un kā viņi stiepj</li>
+                        <li>Un kā krāmē :)</li>
+                        <li>Pārliecinies pats!</li>
                     </ul>
                 </div>
             </div>
