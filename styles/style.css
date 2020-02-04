@@ -99,7 +99,7 @@
     font-size: 30px;
     display: block;
     cursor: pointer;
-    background: url(/images/add_aplis.png) no-repeat left center;
+    background: url(../images/add_aplis.png) no-repeat left center;
     padding: 10px 0 10px 70px;
 }
 
@@ -108,7 +108,7 @@ input#menu {
 }
 
 input:checked +label {
-    background-image: url(/images/close_aplis.png);
+    background-image: url(../images/close_aplis.png);
 }
 
 input:checked ~ .menu-content {
@@ -128,7 +128,7 @@ input:checked ~ .menu-content {
        "cta";
     width: 100vw;
     height: 80vh;
-    background-image: url(https://images.unsplash.com/photo-1494914656837-44eb36fe5471?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-image: url(../images/carry.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
